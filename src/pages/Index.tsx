@@ -29,20 +29,20 @@ function Nav({ active, setActive }: { active: string; setActive: (s: string) => 
     { id: "samples", label: "Образцы" },
   ];
   return (
-    <header className="fixed top-0 left-0 right-0 z-50" style={{ background: "rgba(244,247,251,0.92)", backdropFilter: "blur(16px)", borderBottom: "1px solid rgba(14,135,200,0.12)" }}>
+    <header className="fixed top-0 left-0 right-0 z-50" style={{ background: "rgba(14,20,32,0.92)", backdropFilter: "blur(16px)", borderBottom: "1px solid rgba(201,168,76,0.15)" }}>
       <div className="max-w-6xl mx-auto px-4 py-3 flex items-center justify-between">
         <div className="flex items-center gap-2 cursor-pointer" onClick={() => setActive("home")}>
-          <div className="w-8 h-8 rounded-lg flex items-center justify-center" style={{ background: "linear-gradient(135deg, #0e87c8, #0da87a)" }}>
-            <Icon name="Scale" size={16} className="text-white" />
+          <div className="w-8 h-8 rounded-lg flex items-center justify-center" style={{ background: "linear-gradient(135deg, #c9a84c, #a8882e)" }}>
+            <Icon name="Scale" size={16} className="text-[#0e1420]" />
           </div>
-          <span className="font-oswald font-bold text-slate-800 text-lg tracking-wide">ОТМЕНА<span className="neon-text">ПРИКАЗА</span></span>
+          <span className="font-oswald font-bold text-[#e8dcc8] text-lg tracking-wide">ОТМЕНА<span className="neon-text">ПРИКАЗА</span></span>
         </div>
         <nav className="hidden md:flex items-center gap-1">
           {links.map(l => (
             <button
               key={l.id}
               onClick={() => setActive(l.id)}
-              className={`px-4 py-2 rounded-lg text-sm font-medium transition-all duration-200 font-golos ${active === l.id ? "text-[#0e87c8] bg-[rgba(14,135,200,0.1)]" : "text-slate-500 hover:text-slate-800 hover:bg-slate-100"}`}
+              className={`px-4 py-2 rounded-lg text-sm font-medium transition-all duration-200 font-golos ${active === l.id ? "text-[#c9a84c] bg-[rgba(201,168,76,0.1)]" : "text-[#8a9bb5] hover:text-[#e8dcc8] hover:bg-white/5"}`}
             >
               {l.label}
             </button>
@@ -60,7 +60,7 @@ function Nav({ active, setActive }: { active: string; setActive: (s: string) => 
           <button
             key={l.id}
             onClick={() => setActive(l.id)}
-            className={`px-3 py-1 rounded-full text-xs font-medium whitespace-nowrap transition-all duration-200 ${active === l.id ? "text-[#0e87c8] bg-[rgba(14,135,200,0.1)]" : "text-slate-500 bg-slate-100"}`}
+            className={`px-3 py-1 rounded-full text-xs font-medium whitespace-nowrap transition-all duration-200 ${active === l.id ? "text-[#c9a84c] bg-[rgba(201,168,76,0.1)]" : "text-[#8a9bb5] bg-white/5"}`}
           >
             {l.label}
           </button>
@@ -88,18 +88,18 @@ function HomePage({ setActive }: { setActive: (s: string) => void }) {
     <div className="min-h-screen pt-20">
       <section className="relative overflow-hidden pt-16 pb-24 px-4">
         <div className="absolute inset-0 pointer-events-none">
-          <div className="absolute top-20 left-1/4 w-64 h-64 rounded-full opacity-20 animate-float" style={{ background: "radial-gradient(circle, #0e87c8, transparent)" }} />
-          <div className="absolute bottom-20 right-1/4 w-48 h-48 rounded-full opacity-15 animate-float" style={{ background: "radial-gradient(circle, #0da87a, transparent)", animationDelay: "3s" }} />
+          <div className="absolute top-20 left-1/4 w-64 h-64 rounded-full opacity-15 animate-float" style={{ background: "radial-gradient(circle, #c9a84c, transparent)" }} />
+          <div className="absolute bottom-20 right-1/4 w-48 h-48 rounded-full opacity-10 animate-float" style={{ background: "radial-gradient(circle, #8ba888, transparent)", animationDelay: "3s" }} />
         </div>
         <div className="max-w-4xl mx-auto text-center relative z-10">
-          <div className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full mb-6" style={{ background: "rgba(14,135,200,0.1)", border: "1px solid rgba(14,135,200,0.2)" }}>
-            <div className="w-2 h-2 rounded-full animate-pulse-neon" style={{ background: "#0e87c8" }} />
-            <span className="text-xs font-golos text-[#0e87c8] tracking-widest uppercase font-semibold">Защита прав граждан</span>
+          <div className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full mb-6" style={{ background: "rgba(201,168,76,0.1)", border: "1px solid rgba(201,168,76,0.25)" }}>
+            <div className="w-2 h-2 rounded-full animate-pulse-neon" style={{ background: "#c9a84c" }} />
+            <span className="text-xs font-golos text-[#c9a84c] tracking-widest uppercase font-semibold">Защита прав граждан</span>
           </div>
-          <h1 className="font-oswald text-5xl md:text-7xl font-bold text-slate-800 mb-4 leading-tight">
+          <h1 className="font-oswald text-5xl md:text-7xl font-bold text-[#e8dcc8] mb-4 leading-tight">
             ОТМЕНИТЕ<br /><span className="gradient-text">СУДЕБНЫЙ ПРИКАЗ</span><br />БЕСПЛАТНО
           </h1>
-          <p className="text-slate-500 text-lg md:text-xl max-w-2xl mx-auto mb-10 font-golos leading-relaxed">
+          <p className="text-[#8a9bb5] text-lg md:text-xl max-w-2xl mx-auto mb-10 font-golos leading-relaxed">
             Узнайте о своих правах и создайте заявление об отмене судебного приказа за 5 минут — без юристов и лишних расходов
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
@@ -126,12 +126,12 @@ function HomePage({ setActive }: { setActive: (s: string) => void }) {
       <section className="py-16 px-4">
         <div className="max-w-4xl mx-auto grid grid-cols-1 md:grid-cols-3 gap-6">
           {stats.map((s, i) => (
-            <div key={i} className="card-glass rounded-2xl p-6 text-center neon-border hover:shadow-md transition-all duration-300 hover:-translate-y-1">
-              <div className="w-12 h-12 rounded-xl mx-auto mb-4 flex items-center justify-center" style={{ background: "rgba(14,135,200,0.1)" }}>
-                <Icon name={s.icon} size={22} className="text-[#0e87c8]" />
+            <div key={i} className="card-glass rounded-2xl p-6 text-center neon-border hover:-translate-y-1 transition-all duration-300">
+              <div className="w-12 h-12 rounded-xl mx-auto mb-4 flex items-center justify-center" style={{ background: "rgba(201,168,76,0.1)" }}>
+                <Icon name={s.icon} size={22} className="text-[#c9a84c]" />
               </div>
               <div className="font-oswald text-3xl font-bold gradient-text mb-1">{s.value}</div>
-              <div className="text-sm text-slate-500 font-golos">{s.label}</div>
+              <div className="text-sm text-[#8a9bb5] font-golos">{s.label}</div>
             </div>
           ))}
         </div>
@@ -143,22 +143,22 @@ function HomePage({ setActive }: { setActive: (s: string) => void }) {
         <div className="max-w-4xl mx-auto">
           <div className="text-center mb-12">
             <span className="tag tag-blue mb-4 inline-block">Как это работает</span>
-            <h2 className="font-oswald text-4xl font-bold text-slate-800">ТРИ ПРОСТЫХ ШАГА</h2>
+            <h2 className="font-oswald text-4xl font-bold text-[#e8dcc8]">ТРИ ПРОСТЫХ ШАГА</h2>
           </div>
           <div className="space-y-6">
             {steps.map((step, i) => (
-              <div key={i} className="card-glass rounded-2xl p-6 neon-border hover:shadow-md transition-all duration-300 flex gap-6 items-start">
+              <div key={i} className="card-glass rounded-2xl p-6 neon-border hover:-translate-y-0.5 transition-all duration-300 flex gap-6 items-start">
                 <div className="flex-shrink-0">
-                  <div className="w-14 h-14 rounded-xl flex items-center justify-center" style={{ background: "linear-gradient(135deg, rgba(14,135,200,0.12), rgba(13,168,122,0.08))", border: "1px solid rgba(14,135,200,0.2)" }}>
-                    <Icon name={step.icon} size={24} className="text-[#0e87c8]" />
+                  <div className="w-14 h-14 rounded-xl flex items-center justify-center" style={{ background: "linear-gradient(135deg, rgba(201,168,76,0.15), rgba(139,168,136,0.08))", border: "1px solid rgba(201,168,76,0.25)" }}>
+                    <Icon name={step.icon} size={24} className="text-[#c9a84c]" />
                   </div>
                 </div>
                 <div className="flex-1">
                   <div className="flex items-center gap-3 mb-2">
-                    <span className="font-oswald text-4xl font-bold text-[rgba(14,135,200,0.2)]">{step.num}</span>
-                    <h3 className="font-oswald text-xl font-semibold text-slate-800">{step.title}</h3>
+                    <span className="font-oswald text-4xl font-bold text-[rgba(201,168,76,0.2)]">{step.num}</span>
+                    <h3 className="font-oswald text-xl font-semibold text-[#e8dcc8]">{step.title}</h3>
                   </div>
-                  <p className="text-slate-500 font-golos leading-relaxed">{step.desc}</p>
+                  <p className="text-[#8a9bb5] font-golos leading-relaxed">{step.desc}</p>
                 </div>
               </div>
             ))}
@@ -168,11 +168,11 @@ function HomePage({ setActive }: { setActive: (s: string) => void }) {
 
       <section className="py-16 px-4">
         <div className="max-w-3xl mx-auto text-center">
-          <div className="rounded-3xl p-10 relative overflow-hidden" style={{ background: "linear-gradient(135deg, rgba(14,135,200,0.08), rgba(13,168,122,0.05))", border: "1px solid rgba(14,135,200,0.15)" }}>
-            <div className="absolute inset-0 pointer-events-none" style={{ background: "radial-gradient(ellipse at center, rgba(14,135,200,0.04), transparent 70%)" }} />
-            <Icon name="Shield" size={40} className="text-[#0e87c8] mx-auto mb-4" />
-            <h2 className="font-oswald text-3xl font-bold text-slate-800 mb-3">ГОТОВЫ ЗАЩИТИТЬ СВОИ ПРАВА?</h2>
-            <p className="text-slate-500 font-golos mb-6">Создайте заявление прямо сейчас — это займёт не более 5 минут</p>
+          <div className="rounded-3xl p-10 relative overflow-hidden" style={{ background: "linear-gradient(135deg, rgba(201,168,76,0.08), rgba(139,168,136,0.05))", border: "1px solid rgba(201,168,76,0.2)" }}>
+            <div className="absolute inset-0 pointer-events-none" style={{ background: "radial-gradient(ellipse at center, rgba(201,168,76,0.05), transparent 70%)" }} />
+            <Icon name="Shield" size={40} className="text-[#c9a84c] mx-auto mb-4" />
+            <h2 className="font-oswald text-3xl font-bold text-[#e8dcc8] mb-3">ГОТОВЫ ЗАЩИТИТЬ СВОИ ПРАВА?</h2>
+            <p className="text-[#8a9bb5] font-golos mb-6">Создайте заявление прямо сейчас — это займёт не более 5 минут</p>
             <button
               onClick={() => setActive("constructor")}
               className="btn-neon px-8 py-4 rounded-xl text-base font-oswald tracking-wider inline-flex items-center gap-2"
@@ -227,10 +227,10 @@ function InfoPage() {
       <div className="max-w-4xl mx-auto">
         <div className="text-center mb-12">
           <span className="tag tag-blue mb-4 inline-block">Правовая информация</span>
-          <h1 className="font-oswald text-4xl md:text-5xl font-bold text-slate-800 mb-4">
+          <h1 className="font-oswald text-4xl md:text-5xl font-bold text-[#e8dcc8] mb-4">
             ПРОЦЕДУРА <span className="gradient-text">ОТМЕНЫ</span>
           </h1>
-          <p className="text-slate-500 font-golos max-w-2xl mx-auto">
+          <p className="text-[#8a9bb5] font-golos max-w-2xl mx-auto">
             Всё, что нужно знать об отмене судебного приказа — простым языком
           </p>
         </div>
@@ -238,33 +238,33 @@ function InfoPage() {
         <div className="grid grid-cols-1 md:grid-cols-2 gap-4 mb-10">
           <div className="card-glass rounded-2xl p-6 neon-border">
             <div className="flex items-center gap-3 mb-4">
-              <div className="w-10 h-10 rounded-lg flex items-center justify-center" style={{ background: "rgba(14,135,200,0.1)" }}>
-                <Icon name="Scale" size={18} className="text-[#0e87c8]" />
+              <div className="w-10 h-10 rounded-lg flex items-center justify-center" style={{ background: "rgba(201,168,76,0.1)" }}>
+                <Icon name="Scale" size={18} className="text-[#c9a84c]" />
               </div>
-              <h3 className="font-oswald text-lg font-semibold text-slate-800">Правовая основа</h3>
+              <h3 className="font-oswald text-lg font-semibold text-[#e8dcc8]">Правовая основа</h3>
             </div>
-            <p className="text-slate-500 font-golos text-sm leading-relaxed">
-              Право на отмену судебного приказа закреплено в <span className="text-[#0e87c8] font-semibold">статье 129 ГПК РФ</span>.
+            <p className="text-[#8a9bb5] font-golos text-sm leading-relaxed">
+              Право на отмену судебного приказа закреплено в <span className="text-[#c9a84c] font-semibold">статье 129 ГПК РФ</span>.
               Должник вправе в течение 10 дней со дня получения копии приказа представить возражения относительно его исполнения.
             </p>
           </div>
           <div className="card-glass rounded-2xl p-6 neon-border-green">
             <div className="flex items-center gap-3 mb-4">
-              <div className="w-10 h-10 rounded-lg flex items-center justify-center" style={{ background: "rgba(13,168,122,0.1)" }}>
-                <Icon name="AlertTriangle" size={18} className="text-[#0da87a]" />
+              <div className="w-10 h-10 rounded-lg flex items-center justify-center" style={{ background: "rgba(139,168,136,0.1)" }}>
+                <Icon name="AlertTriangle" size={18} className="text-[#8ba888]" />
               </div>
-              <h3 className="font-oswald text-lg font-semibold text-slate-800">Важно знать</h3>
+              <h3 className="font-oswald text-lg font-semibold text-[#e8dcc8]">Важно знать</h3>
             </div>
-            <p className="text-slate-500 font-golos text-sm leading-relaxed">
-              Если вы не получили копию приказа, <span className="text-[#0da87a] font-semibold">срок не начал течь</span>.
+            <p className="text-[#8a9bb5] font-golos text-sm leading-relaxed">
+              Если вы не получили копию приказа, <span className="text-[#8ba888] font-semibold">срок не начал течь</span>.
               При обнаружении удержаний у приставов можно восстановить срок, указав дату фактического обнаружения.
             </p>
           </div>
         </div>
 
         <div className="card-glass rounded-2xl p-6 neon-border mb-8">
-          <h2 className="font-oswald text-2xl font-bold text-slate-800 mb-6 flex items-center gap-3">
-            <Icon name="GitBranch" size={22} className="text-[#0e87c8]" />
+          <h2 className="font-oswald text-2xl font-bold text-[#e8dcc8] mb-6 flex items-center gap-3">
+            <Icon name="GitBranch" size={22} className="text-[#c9a84c]" />
             СХЕМА ПРОЦЕДУРЫ
           </h2>
           <div className="space-y-0">
@@ -282,8 +282,8 @@ function InfoPage() {
                   )}
                 </div>
                 <div className="pb-6">
-                  <div className="font-oswald font-semibold text-slate-800 text-sm">{item.step}</div>
-                  <div className="text-slate-500 font-golos text-sm mt-0.5">{item.desc}</div>
+                  <div className="font-oswald font-semibold text-[#e8dcc8] text-sm">{item.step}</div>
+                  <div className="text-[#8a9bb5] font-golos text-sm mt-0.5">{item.desc}</div>
                 </div>
               </div>
             ))}
@@ -291,27 +291,27 @@ function InfoPage() {
         </div>
 
         <div>
-          <h2 className="font-oswald text-2xl font-bold text-slate-800 mb-6 flex items-center gap-3">
-            <Icon name="HelpCircle" size={22} className="text-[#0e87c8]" />
+          <h2 className="font-oswald text-2xl font-bold text-[#e8dcc8] mb-6 flex items-center gap-3">
+            <Icon name="HelpCircle" size={22} className="text-[#c9a84c]" />
             ЧАСТЫЕ ВОПРОСЫ
           </h2>
           <div className="space-y-3">
             {faqs.map((faq, i) => (
               <div
                 key={i}
-                className={`card-glass rounded-xl overflow-hidden transition-all duration-300 cursor-pointer ${openFaq === i ? "neon-border" : "border border-slate-200 hover:border-[rgba(14,135,200,0.3)]"}`}
+                className={`card-glass rounded-xl overflow-hidden transition-all duration-300 cursor-pointer ${openFaq === i ? "neon-border" : "border border-[#1e2d45] hover:border-[rgba(201,168,76,0.3)]"}`}
                 onClick={() => setOpenFaq(openFaq === i ? null : i)}
               >
                 <div className="p-5 flex items-center justify-between gap-4">
-                  <span className="font-golos font-semibold text-slate-800 text-sm">{faq.q}</span>
-                  <div className={`w-6 h-6 rounded-full flex items-center justify-center flex-shrink-0 transition-all duration-300 ${openFaq === i ? "bg-[rgba(14,135,200,0.15)] text-[#0e87c8]" : "text-slate-400"}`}>
+                  <span className="font-golos font-semibold text-[#e8dcc8] text-sm">{faq.q}</span>
+                  <div className={`w-6 h-6 rounded-full flex items-center justify-center flex-shrink-0 transition-all duration-300 ${openFaq === i ? "bg-[rgba(201,168,76,0.15)] text-[#c9a84c]" : "text-[#4a5a70]"}`}>
                     <Icon name={openFaq === i ? "ChevronUp" : "ChevronDown"} size={14} />
                   </div>
                 </div>
                 {openFaq === i && (
                   <div className="px-5 pb-5 animate-fade-in">
-                    <div className="w-full h-px bg-slate-100 mb-4" />
-                    <p className="text-slate-500 font-golos text-sm leading-relaxed">{faq.a}</p>
+                    <div className="w-full h-px mb-4" style={{ background: "rgba(201,168,76,0.1)" }} />
+                    <p className="text-[#8a9bb5] font-golos text-sm leading-relaxed">{faq.a}</p>
                   </div>
                 )}
               </div>
@@ -435,7 +435,7 @@ function ConstructorPage() {
 
     return (
       <div key={field} className="space-y-1.5">
-        <label className="text-xs font-golos font-semibold text-slate-600 uppercase tracking-wider block">
+        <label className="text-xs font-golos font-semibold text-[#8a9bb5] uppercase tracking-wider block">
           {fieldLabels[field]}
         </label>
         {isTextarea ? (
@@ -498,16 +498,16 @@ ___________________ ${data.lastName} ${data.firstName[0] || ""}.${data.middleNam
       <div className="min-h-screen pt-24 pb-16 px-4">
         <div className="max-w-3xl mx-auto">
           <div className="text-center mb-8">
-            <div className="w-16 h-16 rounded-2xl mx-auto mb-4 flex items-center justify-center animate-scale-in" style={{ background: "linear-gradient(135deg, rgba(13,168,122,0.15), rgba(14,135,200,0.1))", border: "1px solid rgba(13,168,122,0.3)" }}>
-              <Icon name="CheckCheck" size={28} className="text-[#0da87a]" />
+            <div className="w-16 h-16 rounded-2xl mx-auto mb-4 flex items-center justify-center animate-scale-in" style={{ background: "linear-gradient(135deg, rgba(139,168,136,0.15), rgba(201,168,76,0.1))", border: "1px solid rgba(139,168,136,0.35)" }}>
+              <Icon name="CheckCheck" size={28} className="text-[#8ba888]" />
             </div>
-            <h1 className="font-oswald text-3xl font-bold text-slate-800 mb-2">ЗАЯВЛЕНИЕ ГОТОВО!</h1>
-            <p className="text-slate-500 font-golos">Скопируйте текст, распечатайте и подайте в суд</p>
+            <h1 className="font-oswald text-3xl font-bold text-[#e8dcc8] mb-2">ЗАЯВЛЕНИЕ ГОТОВО!</h1>
+            <p className="text-[#8a9bb5] font-golos">Скопируйте текст, распечатайте и подайте в суд</p>
           </div>
 
           <div className="card-glass rounded-2xl p-6 neon-border mb-6">
             <div className="flex items-center justify-between mb-4">
-              <h2 className="font-oswald text-lg font-semibold text-slate-800">Текст заявления</h2>
+              <h2 className="font-oswald text-lg font-semibold text-[#e8dcc8]">Текст заявления</h2>
               <button
                 onClick={() => navigator.clipboard.writeText(text)}
                 className="btn-outline-neon px-4 py-2 rounded-lg text-xs font-oswald tracking-wider flex items-center gap-1.5"
@@ -516,19 +516,19 @@ ___________________ ${data.lastName} ${data.firstName[0] || ""}.${data.middleNam
                 Скопировать
               </button>
             </div>
-            <pre className="text-slate-700 font-golos text-sm leading-relaxed whitespace-pre-wrap p-4 rounded-xl" style={{ background: "#f8fafc", border: "1px solid #e2e8f0" }}>
+            <pre className="text-[#c8bfa8] font-golos text-sm leading-relaxed whitespace-pre-wrap p-4 rounded-xl" style={{ background: "rgba(14,20,32,0.7)", border: "1px solid rgba(201,168,76,0.15)" }}>
               {text}
             </pre>
           </div>
 
           <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 mb-6">
             <div className="card-glass rounded-xl p-4 neon-border-green flex gap-3 items-start">
-              <Icon name="Info" size={18} className="text-[#0da87a] flex-shrink-0 mt-0.5" />
-              <p className="text-sm text-slate-500 font-golos">Подайте заявление лично или направьте заказным письмом с уведомлением</p>
+              <Icon name="Info" size={18} className="text-[#8ba888] flex-shrink-0 mt-0.5" />
+              <p className="text-sm text-[#8a9bb5] font-golos">Подайте заявление лично или направьте заказным письмом с уведомлением</p>
             </div>
             <div className="card-glass rounded-xl p-4 neon-border flex gap-3 items-start">
-              <Icon name="Clock" size={18} className="text-[#0e87c8] flex-shrink-0 mt-0.5" />
-              <p className="text-sm text-slate-500 font-golos">Суд обязан отменить приказ и направить вам копию определения об отмене</p>
+              <Icon name="Clock" size={18} className="text-[#c9a84c] flex-shrink-0 mt-0.5" />
+              <p className="text-sm text-[#8a9bb5] font-golos">Суд обязан отменить приказ и направить вам копию определения об отмене</p>
             </div>
           </div>
 
@@ -554,15 +554,15 @@ ___________________ ${data.lastName} ${data.firstName[0] || ""}.${data.middleNam
       <div className="max-w-2xl mx-auto">
         <div className="text-center mb-8">
           <span className="tag tag-blue mb-3 inline-block">Конструктор заявлений</span>
-          <h1 className="font-oswald text-3xl font-bold text-slate-800">СОЗДАЙТЕ <span className="gradient-text">ЗАЯВЛЕНИЕ</span></h1>
+          <h1 className="font-oswald text-3xl font-bold text-[#e8dcc8]">СОЗДАЙТЕ <span className="gradient-text">ЗАЯВЛЕНИЕ</span></h1>
         </div>
 
         <div className="mb-8">
           <div className="flex justify-between items-center mb-2">
-            <span className="text-xs text-slate-500 font-golos">Шаг {step} из {totalSteps}</span>
-            <span className="text-xs font-golos text-[#0e87c8]">{Math.round(progress)}% заполнено</span>
+            <span className="text-xs text-[#8a9bb5] font-golos">Шаг {step} из {totalSteps}</span>
+            <span className="text-xs font-golos text-[#c9a84c]">{Math.round(progress)}% заполнено</span>
           </div>
-          <div className="h-2 rounded-full w-full bg-slate-200">
+          <div className="h-2 rounded-full w-full" style={{ background: "rgba(255,255,255,0.07)" }}>
             <div className="h-full rounded-full progress-bar" style={{ width: `${progress}%` }} />
           </div>
           <div className="flex justify-between mt-3">
@@ -571,21 +571,21 @@ ___________________ ${data.lastName} ${data.firstName[0] || ""}.${data.middleNam
                 <div
                   className="w-7 h-7 rounded-full flex items-center justify-center text-xs font-oswald font-bold transition-all duration-300"
                   style={{
-                    background: step > i + 1 ? "#0da87a" : step === i + 1 ? "#0e87c8" : "#e2e8f0",
-                    color: step > i + 1 || step === i + 1 ? "#ffffff" : "#94a3b8",
-                    border: step === i + 1 ? "2px solid rgba(14,135,200,0.4)" : "none",
-                    boxShadow: step === i + 1 ? "0 2px 10px rgba(14,135,200,0.3)" : "none"
+                    background: step > i + 1 ? "#8ba888" : step === i + 1 ? "#c9a84c" : "rgba(255,255,255,0.08)",
+                    color: step > i + 1 || step === i + 1 ? "#0e1420" : "#4a5a70",
+                    border: step === i + 1 ? "2px solid rgba(201,168,76,0.5)" : "none",
+                    boxShadow: step === i + 1 ? "0 2px 10px rgba(201,168,76,0.3)" : "none"
                   }}>
                   {step > i + 1 ? <Icon name="Check" size={12} /> : i + 1}
                 </div>
-                <span className={`text-xs font-golos hidden sm:block ${step === i + 1 ? "text-[#0e87c8]" : "text-slate-400"}`}>{label}</span>
+                <span className={`text-xs font-golos hidden sm:block ${step === i + 1 ? "text-[#c9a84c]" : "text-[#4a5a70]"}`}>{label}</span>
               </div>
             ))}
           </div>
         </div>
 
         <div className="card-glass rounded-2xl p-6 neon-border animate-fade-in">
-          <h2 className="font-oswald text-xl font-bold text-slate-800 mb-6">
+          <h2 className="font-oswald text-xl font-bold text-[#e8dcc8] mb-6">
             {step === 1 && "Ваши личные данные"}
             {step === 2 && "Данные о судебном приказе"}
             {step === 3 && "Основание для отмены"}
@@ -701,42 +701,42 @@ _________________ [ФИО]`,
       <div className="max-w-4xl mx-auto">
         <div className="text-center mb-12">
           <span className="tag tag-green mb-4 inline-block">Образцы документов</span>
-          <h1 className="font-oswald text-4xl font-bold text-slate-800 mb-4">
+          <h1 className="font-oswald text-4xl font-bold text-[#e8dcc8] mb-4">
             ГОТОВЫЕ <span className="gradient-text">ШАБЛОНЫ</span>
           </h1>
-          <p className="text-slate-500 font-golos max-w-xl mx-auto">
+          <p className="text-[#8a9bb5] font-golos max-w-xl mx-auto">
             Выберите подходящий образец или воспользуйтесь конструктором для создания персонального заявления
           </p>
         </div>
 
         <div className="grid gap-6">
           {samples.map((s, i) => (
-            <div key={i} className={`card-glass rounded-2xl overflow-hidden transition-all duration-300 ${open === i ? "neon-border" : "border border-slate-200 hover:border-[rgba(14,135,200,0.3)]"}`}>
+            <div key={i} className={`card-glass rounded-2xl overflow-hidden transition-all duration-300 ${open === i ? "neon-border" : "border border-[#1e2d45] hover:border-[rgba(201,168,76,0.3)]"}`}>
               <div className="p-6 cursor-pointer" onClick={() => setOpen(open === i ? null : i)}>
                 <div className="flex items-start justify-between gap-4">
                   <div className="flex items-start gap-4">
-                    <div className="w-12 h-12 rounded-xl flex items-center justify-center flex-shrink-0" style={{ background: "rgba(14,135,200,0.08)", border: "1px solid rgba(14,135,200,0.15)" }}>
-                      <Icon name={s.icon} size={22} className="text-[#0e87c8]" />
+                    <div className="w-12 h-12 rounded-xl flex items-center justify-center flex-shrink-0" style={{ background: "rgba(201,168,76,0.08)", border: "1px solid rgba(201,168,76,0.18)" }}>
+                      <Icon name={s.icon} size={22} className="text-[#c9a84c]" />
                     </div>
                     <div>
                       <div className="flex items-center gap-2 mb-1">
                         <span className={`tag ${s.tagType}`}>{s.tag}</span>
                       </div>
-                      <h3 className="font-oswald text-xl font-semibold text-slate-800">{s.title}</h3>
-                      <p className="text-slate-500 font-golos text-sm mt-1">{s.desc}</p>
+                      <h3 className="font-oswald text-xl font-semibold text-[#e8dcc8]">{s.title}</h3>
+                      <p className="text-[#8a9bb5] font-golos text-sm mt-1">{s.desc}</p>
                     </div>
                   </div>
-                  <div className={`w-8 h-8 rounded-lg flex items-center justify-center flex-shrink-0 transition-all duration-300 ${open === i ? "bg-[rgba(14,135,200,0.1)]" : "bg-slate-100"}`}>
-                    <Icon name={open === i ? "ChevronUp" : "ChevronDown"} size={16} className={open === i ? "text-[#0e87c8]" : "text-slate-400"} />
+                  <div className={`w-8 h-8 rounded-lg flex items-center justify-center flex-shrink-0 transition-all duration-300 ${open === i ? "bg-[rgba(201,168,76,0.1)]" : "bg-white/5"}`}>
+                    <Icon name={open === i ? "ChevronUp" : "ChevronDown"} size={16} className={open === i ? "text-[#c9a84c]" : "text-[#4a5a70]"} />
                   </div>
                 </div>
               </div>
 
               {open === i && (
                 <div className="px-6 pb-6 animate-fade-in">
-                  <div className="w-full h-px mb-4 bg-slate-100" />
+                  <div className="w-full h-px mb-4" style={{ background: "rgba(201,168,76,0.12)" }} />
                   <div className="flex items-center justify-between mb-3">
-                    <span className="text-xs text-slate-400 font-golos uppercase tracking-widest">Текст образца</span>
+                    <span className="text-xs text-[#4a5a70] font-golos uppercase tracking-widest">Текст образца</span>
                     <button
                       onClick={() => navigator.clipboard.writeText(s.preview)}
                       className="btn-outline-neon px-3 py-1.5 rounded-lg text-xs font-oswald tracking-wider flex items-center gap-1.5"
@@ -745,7 +745,7 @@ _________________ [ФИО]`,
                       Скопировать
                     </button>
                   </div>
-                  <pre className="text-slate-700 font-golos text-xs leading-relaxed whitespace-pre-wrap p-4 rounded-xl" style={{ background: "#f8fafc", border: "1px solid #e2e8f0" }}>
+                  <pre className="text-[#c8bfa8] font-golos text-xs leading-relaxed whitespace-pre-wrap p-4 rounded-xl" style={{ background: "rgba(14,20,32,0.7)", border: "1px solid rgba(201,168,76,0.12)" }}>
                     {s.preview}
                   </pre>
                 </div>
@@ -756,9 +756,9 @@ _________________ [ФИО]`,
 
         <div className="mt-10 text-center">
           <div className="card-glass rounded-2xl p-6 neon-border inline-block max-w-md w-full">
-            <Icon name="Wand2" size={28} className="text-[#0e87c8] mx-auto mb-3" />
-            <p className="text-slate-800 font-golos font-semibold mb-2">Нужно персональное заявление?</p>
-            <p className="text-slate-500 font-golos text-sm mb-4">Конструктор подставит ваши данные автоматически</p>
+            <Icon name="Wand2" size={28} className="text-[#c9a84c] mx-auto mb-3" />
+            <p className="text-[#e8dcc8] font-golos font-semibold mb-2">Нужно персональное заявление?</p>
+            <p className="text-[#8a9bb5] font-golos text-sm mb-4">Конструктор подставит ваши данные автоматически</p>
             <button
               onClick={() => setActive("constructor")}
               className="btn-neon px-6 py-3 rounded-xl font-oswald tracking-wider text-sm inline-flex items-center gap-2"
@@ -776,32 +776,32 @@ _________________ [ФИО]`,
 // ─── FOOTER ───────────────────────────────────────────────
 function Footer({ setActive }: { setActive: (s: string) => void }) {
   return (
-    <footer className="border-t mt-8 bg-white" style={{ borderColor: "#e2e8f0" }}>
+    <footer className="border-t mt-8" style={{ borderColor: "rgba(201,168,76,0.12)", background: "#0a1019" }}>
       <div className="max-w-6xl mx-auto px-4 py-10">
         <div className="flex flex-col md:flex-row justify-between gap-8">
           <div>
             <div className="flex items-center gap-2 mb-3">
-              <div className="w-7 h-7 rounded-lg flex items-center justify-center" style={{ background: "linear-gradient(135deg, #0e87c8, #0da87a)" }}>
-                <Icon name="Scale" size={14} className="text-white" />
+              <div className="w-7 h-7 rounded-lg flex items-center justify-center" style={{ background: "linear-gradient(135deg, #c9a84c, #a8882e)" }}>
+                <Icon name="Scale" size={14} className="text-[#0e1420]" />
               </div>
-              <span className="font-oswald font-bold text-slate-800">ОТМЕНА<span className="neon-text">ПРИКАЗА</span></span>
+              <span className="font-oswald font-bold text-[#e8dcc8]">ОТМЕНА<span className="neon-text">ПРИКАЗА</span></span>
             </div>
-            <p className="text-slate-500 text-sm font-golos max-w-xs">Сервис помощи гражданам в отмене судебных приказов</p>
+            <p className="text-[#4a5a70] text-sm font-golos max-w-xs">Сервис помощи гражданам в отмене судебных приказов</p>
           </div>
           <div className="flex gap-10">
             <div>
-              <div className="text-xs text-slate-400 uppercase tracking-widest font-golos mb-3">Разделы</div>
+              <div className="text-xs text-[#4a5a70] uppercase tracking-widest font-golos mb-3">Разделы</div>
               {["home", "info", "constructor", "samples"].map((id, i) => (
                 <div key={id} className="mb-1.5">
-                  <button onClick={() => setActive(id)} className="text-sm text-slate-500 hover:text-[#0e87c8] transition-colors font-golos">
+                  <button onClick={() => setActive(id)} className="text-sm text-[#6a7a90] hover:text-[#c9a84c] transition-colors font-golos">
                     {["Главная", "О процедуре", "Конструктор", "Образцы"][i]}
                   </button>
                 </div>
               ))}
             </div>
             <div>
-              <div className="text-xs text-slate-400 uppercase tracking-widest font-golos mb-3">Правовая база</div>
-              <div className="text-sm text-slate-500 font-golos space-y-1.5">
+              <div className="text-xs text-[#4a5a70] uppercase tracking-widest font-golos mb-3">Правовая база</div>
+              <div className="text-sm text-[#6a7a90] font-golos space-y-1.5">
                 <div>ст. 129 ГПК РФ</div>
                 <div>Глава 11 ГПК РФ</div>
                 <div>ФЗ «Об исполнительном производстве»</div>
@@ -809,9 +809,9 @@ function Footer({ setActive }: { setActive: (s: string) => void }) {
             </div>
           </div>
         </div>
-        <div className="mt-8 pt-6 border-t flex flex-col md:flex-row items-center justify-between gap-2" style={{ borderColor: "#f1f5f9" }}>
-          <p className="text-xs text-slate-600 font-golos">Сайт носит информационный характер. Не является юридической консультацией.</p>
-          <p className="text-xs text-slate-600 font-golos">© 2024 ОтменаПриказа</p>
+        <div className="mt-8 pt-6 border-t flex flex-col md:flex-row items-center justify-between gap-2" style={{ borderColor: "rgba(201,168,76,0.08)" }}>
+          <p className="text-xs text-[#3a4a5c] font-golos">Сайт носит информационный характер. Не является юридической консультацией.</p>
+          <p className="text-xs text-[#3a4a5c] font-golos">© 2024 ОтменаПриказа</p>
         </div>
       </div>
     </footer>
